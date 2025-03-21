@@ -1,9 +1,8 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment
 metadata: 
   name: mysql
   namespace: expense
-
   # labels of deployment resource
   labels:
     app:  mysql
@@ -15,7 +14,7 @@ spec:
     MatchLabels:
       app: mysql
       tier: mysql
-      project: mysql
+      project: expense
   template:
     metadata:  
       labels:
