@@ -23,7 +23,7 @@ spec:
         project: expense
     spec:
       containers:
-      - name: mysql
+      - name: nginx
         image: joindevops/mysql:1.0.0
 
 ---
