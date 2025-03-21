@@ -39,7 +39,7 @@ spec:
     tier: mysql
     project: expense
   ports:
-  - protocal: TCP
+  - protocol: TCP
     port: 3306 #Service port
     targetPort: 3306
 
