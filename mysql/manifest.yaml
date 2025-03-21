@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: mysql
+  namespace: expense
+
+  # labels of deployment resource
+  labels:
+    app:  mysql
+    tier: mysql
+    project:  expense
+spec: 
+  replicas: 1
+  selector:
+    MatchLabels:
+      app: mysql
+      tier: mysql
+      project: mysql
+  template:
+    metadata:  
+      labels:
+        app: mysql
+        tier: mysql
+        project: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: joindevops/mysql:1.0.0
+
+---
+kind: Service
+apiVersion: apps/v1
+metadata:
+  name: mysql
+  namespace:  expense
+spec:
+  selector: #labels are used as selectors
+    app: mysql
+    tier: mysql
+    project: 
+  ports:
+  - protocal: TCP
+    port: 3306 #Service port
+    targetPort: 3306
+
