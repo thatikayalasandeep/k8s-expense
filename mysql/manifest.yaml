@@ -20,7 +20,7 @@ spec:
       labels:
         app: mysql
         tier: mysql
-        project: mysql
+        project: expense
     spec:
       containers:
       - name: mysql
