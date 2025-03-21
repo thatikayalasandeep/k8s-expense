@@ -8,7 +8,7 @@ metadata:
   labels:
     app:  mysql
     tier: mysql
-    project:  expense
+    project: expense
 spec: 
   replicas: 1
   selector:
@@ -37,7 +37,7 @@ spec:
   selector: #labels are used as selectors
     app: mysql
     tier: mysql
-    project: 
+    project: expense
   ports:
   - protocal: TCP
     port: 3306 #Service port
